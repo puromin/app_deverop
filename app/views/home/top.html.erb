@@ -1,0 +1,30 @@
+<body class="body">
+  <main role="main">
+    <div class="top">
+      <div class="top-message">
+        <h1>罰アプリ</h1>
+        <p>罰を設定して目標を達成しよう！</p>
+        <hr>
+      </div>
+      <div class="top-new">
+        <h2>新着目標</h2>
+        <% @new_tasks.each do |task| %>
+          <div class="top-new-con">
+            <h3><%= task.name %></h3>
+            <p><%= task.description %></p>
+          </div>
+        <% end %>
+      <hr>
+      </div>
+      <div class="top-favorite">
+        <h2>注目の目標</h2>
+        <% @update_tasks.each do |task| %>
+          <div class="top-update-con">
+            <h3><%= task.name %></h3>
+            <p><%= task.description %></p>
+          </div>
+        <% end %>
+      </div>
+  </main>
+</body>
+
